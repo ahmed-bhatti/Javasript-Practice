@@ -51,17 +51,47 @@
         ["ahmed" ,12,"shamu",56 ],
         ["muneeb" ,12,"shamu",56 ],
     ]; 
-    document.write("<table border='1px' cellspacing='0px'>")
+    document.write("<table border='1px' cellspacing='0px'>");
     for(var a = 0 ;a<4; a++){
-        document.write("<tr>")
+        document.write("<tr>");
         for(var b=0; b<4; b++){
             document.write  ("<td>" +arr[a][b] + "  </td> ");  
         }
-        document.write("</tr>")
+        document.write("</tr>");
     document.write("<br>");
 
     }
-    document.write("</table>")
+    document.write("</table>");
+
+    var ary = [34,3,21,43];
+
+    document.write(ary + "<br><br>");
+
+    var b = ary.every(ageadult);
+
+    document.write(b + "<br><br>");
+
+    function ageadult(arr){
+      return  arr >= 18;
+    }
+
+    var a = {
+         fname : "Ahmed Ali",
+         lname : "Imtiaz Ali Taj",
+         Phone : 0312144,
+         city  : "Lahore",
+         salary : function(){
+            var a = "Rajpoot" + " "+ this.fname;
+            return a;
+         },
+       
+    }
+
+    for(var key in a){
+        document.write(key + " : " + a[key] + "<br><br>")
+    }
+    console.log(a);
+    // document.write(a.salary());
     </script>
 </body>
 </html>
