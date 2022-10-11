@@ -5,9 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #test{
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        }
+    </style>
 </head>
+
 <body>
+
+    <div id="test"></div>
     <script>
+
+var a = 0;
+ var id = setInterval(anim,500);
+
+function anim(){
+    a = a + 10;
+    if(a == 200){
+        a = a + 10;
+      var  target = document.getElementById("test");
+      target.style.background= "yellow";
+      target.style.marginTop = a + 'px';
+        clearInterval(id)
+    }
+    // console.log(a);
+    else{
+        var target = document.getElementById("test");
+    target.style.marginLeft = a + 'px';
+    }
+
+}
     //    var vowels = "b";
 
     //    switch(vowels){
@@ -45,53 +75,55 @@
     //      document.write( a + "*" + b + "=" + a*b + "<br>");
     // }
 
-    var arr = [ 
-        ["ali" ,12,"shamu", 34 ],
-        ["umar" ,12,"shamu",56 ],
-        ["ahmed" ,12,"shamu",56 ],
-        ["muneeb" ,12,"shamu",56 ],
-    ]; 
-    document.write("<table border='1px' cellspacing='0px'>");
-    for(var a = 0 ;a<4; a++){
-        document.write("<tr>");
-        for(var b=0; b<4; b++){
-            document.write  ("<td>" +arr[a][b] + "  </td> ");  
-        }
-        document.write("</tr>");
-    document.write("<br>");
+    // var arr = [ 
+    //     ["ali" ,12,"shamu", 34 ],
+    //     ["umar" ,12,"shamu",56 ],
+    //     ["ahmed" ,12,"shamu",56 ],
+    //     ["muneeb" ,12,"shamu",56 ],
+    // ]; 
+    // document.write("<table border='1px' cellspacing='0px'>");
+    // for(var a = 0 ;a<4; a++){
+    //     document.write("<tr>");
+    //     for(var b=0; b<4; b++){
+    //         document.write  ("<td>" +arr[a][b] + "  </td> ");  
+    //     }
+    //     document.write("</tr>");
+    // document.write("<br>");
+    // }
+    // document.write("</table>");
 
-    }
-    document.write("</table>");
+    // var ary = [34,3,21,43];
 
-    var ary = [34,3,21,43];
+    // document.write(ary + "<br><br>");
 
-    document.write(ary + "<br><br>");
+    // var b = ary.every(ageadult);
 
-    var b = ary.every(ageadult);
+    // document.write(b + "<br><br>");
 
-    document.write(b + "<br><br>");
+    // function ageadult(arr){
+    //   return  arr >= 18;
+    // }
 
-    function ageadult(arr){
-      return  arr >= 18;
-    }
-
-    var a = {
-         fname : "Ahmed Ali",
-         lname : "Imtiaz Ali Taj",
-         Phone : 0312144,
-         city  : "Lahore",
-         salary : function(){
-            var a = "Rajpoot" + " "+ this.fname;
-            return a;
-         },
+    // var a = {
+    //      fname : "Ahmed Ali",
+    //      lname : "Imtiaz Ali Taj",
+    //      Phone : 0312144,
+    //      city  : "Lahore",
+    //      salary : function(){
+    //         var a = "Rajpoot" + " "+ this.fname;
+    //         return a;
+    //      },
        
-    }
+    // }
 
-    for(var key in a){
-        document.write(key + " : " + a[key] + "<br><br>")
-    }
-    console.log(a);
+    // for(var key in a){
+    //     document.write(key + " : " + a[key] + "<br><br>")
+    // }
+    // console.log(a);
     // document.write(a.salary());
+
+
+
     </script>
 </body>
 </html>
