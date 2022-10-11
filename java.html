@@ -16,28 +16,28 @@
 
 <body>
 
-    <div id="test"></div>
+    <!-- <div id="test"></div> -->
     <script>
 
-var a = 0;
- var id = setInterval(anim,500);
+// var a = 0;
+//  var id = setInterval(anim,500);
 
-function anim(){
-    a = a + 10;
-    if(a == 200){
-        a = a + 10;
-      var  target = document.getElementById("test");
-      target.style.background= "yellow";
-      target.style.marginTop = a + 'px';
-        clearInterval(id)
-    }
-    // console.log(a);
-    else{
-        var target = document.getElementById("test");
-    target.style.marginLeft = a + 'px';
-    }
+// function anim(){
+//     a = a + 10;
+//     if(a == 200){
+//         a = a + 10;
+//       var  target = document.getElementById("test");
+//       target.style.background= "yellow";
+//       target.style.marginTop = a + 'px';
+//         clearInterval(id)
+//     }
+//     // console.log(a);
+//     else{
+//         var target = document.getElementById("test");
+//             target.style.marginLeft = a + 'px';
+//     }
 
-}
+// }
     //    var vowels = "b";
 
     //    switch(vowels){
@@ -122,6 +122,16 @@ function anim(){
     // console.log(a);
     // document.write(a.salary());
 
+    function sum (names,field,...args){
+   document.write(`Hello ${names} ${field} `)
+       let  sum = 0;
+        for( let i in args){
+            sum += args[i];
+
+        }
+        document.write(` ${sum} `);
+    }
+    sum("Ahmed Ali","BSCS", 20,20,20);
 
 
     </script>
