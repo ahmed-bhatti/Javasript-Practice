@@ -122,18 +122,47 @@
     // console.log(a);
     // document.write(a.salary());
 
-    function sum (names,field,...args){
-   document.write(`Hello ${names} ${field} `)
-       let  sum = 0;
-        for( let i in args){
-            sum += args[i];
+//     function sum (names,field,...args){
+//    document.write(`Hello ${names} ${field} `)
+//        let  sum = 0;
+//         for( let i in args){
+//             sum += args[i];
 
+//         }
+//         document.write(` ${sum} `);
+//     }
+//     sum("Ahmed Ali","BSCS", 20,20,20);
+
+     class student {
+        constructor(name,age,salary){
+            this.student = name;
+            this.age     = age;
+            this.salary  = salary;
+            console.log("Hello Ahmad");
         }
-        document.write(` ${sum} `);
-    }
-    sum("Ahmed Ali","BSCS", 20,20,20);
+        info(){
+            document.write(`<h3> Web Developer </h3>
+             Name : ${this.student} <br>
+             Age  : ${this.age}<br>
+             salary : ${this.salary}`)
+        }
+     }
 
+     class employe extends student{
+        info(){
+            // super.info();
+            let bonus = 3000 ;
+            let total = bonus + this.salary;
+            document.write(`<h3> Mobile App Developer </h3>
+             Name : ${this.student} <br>
+             Age  : ${this.age}<br>
+             salary : ${total}`)
+        }
 
+     }
+
+     let a = new employe("Ahmed Ali",22,25000);
+     a.info();
     </script>
 </body>
 </html>
