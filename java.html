@@ -133,36 +133,44 @@
 //     }
 //     sum("Ahmed Ali","BSCS", 20,20,20);
 
-     class student {
-        constructor(name,age,salary){
-            this.student = name;
-            this.age     = age;
-            this.salary  = salary;
-            console.log("Hello Ahmad");
-        }
-        info(){
-            document.write(`<h3> Web Developer </h3>
-             Name : ${this.student} <br>
-             Age  : ${this.age}<br>
-             salary : ${this.salary}`)
-        }
-     }
+    //  class student {
+    //     constructor(name,age,salary){
+    //         this.student = name;
+    //         this.age     = age;
+    //         this.salary  = salary;
+    //         console.log("Hello Ahmad");
+    //     }
+    //     info(){
+    //         document.write(`<h3> Web Developer </h3>
+    //          Name : ${this.student} <br>
+    //          Age  : ${this.age}<br>
+    //          salary : ${this.salary}`)
+    //     }
+    //  }
 
-     class employe extends student{
-        info(){
-            // super.info();
-            let bonus = 3000 ;
-            let total = bonus + this.salary;
-            document.write(`<h3> Mobile App Developer </h3>
-             Name : ${this.student} <br>
-             Age  : ${this.age}<br>
-             salary : ${total}`)
+    //  class employe extends student{
+    //     info(){
+    //         // super.info();
+    //         let bonus = 3000 ;
+    //         let total = bonus + this.salary;
+    //         document.write(`<h3> Mobile App Developer </h3>
+    //          Name : ${this.student} <br>
+    //          Age  : ${this.age}<br>
+    //          salary : ${total}`)
+    //     }
+
+    //  }
+
+    //  let a = new employe("Ahmed Ali",22,25000);
+    //  a.info();
+    fetch("student-data.json")
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+        for( x in data){
+            document.write(`${data[x].name} - ${data[x].age} - ${data[x].education} <br> `)
         }
-
-     }
-
-     let a = new employe("Ahmed Ali",22,25000);
-     a.info();
+    })
     </script>
 </body>
 </html>
